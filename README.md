@@ -6,8 +6,11 @@ So it would be advisable to bring a windows laptop if possible.
 1. Python installation
 2. Visual Studio Code
 
-### Linear regression
+### Linear regression: House price prediction
 
-### Digit recognition using 
+### Logistic Regression: Digit recognition
 
-### Classifying cats and dogs
+Download dataset: https://drive.google.com/file/d/1b-u6olkqvFqQwdE268_XH4Bi-MMliP_p/view?usp=sharing
+
+
+### Classification using TensorFlow: Cats vs Dogs
