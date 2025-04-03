@@ -43,13 +43,15 @@ def compute_gradient(x, y, w, b):
 # Function to calculate the cost
 def compute_cost(x, y, w, b):
    
-    m = x.shape[0] 
+    num_examples = x.shape[0] 
     cost = 0
     
-    for i in range(m):
-        f_wb = w * x[i] + b
-        cost = cost + (f_wb - y[i])**2
-    total_cost = 1 / (2 * m) * cost
+    for i in range(num_examples):
+        prediction = w * x[i] + b
+        actual = y[i]
+        loss = prediction - actual
+        cost = cost + (loss)**2
+    total_cost = 1 / (2 * num_examples) * cost
 
     return total_cost
 
@@ -109,7 +111,7 @@ def main():
     
     w_init = 0  # Initial weight
     b_init = 0  # Initial bias
-    iterations = 1  # Number of iterations
+    iterations = 10  # Number of iterations
     learning_rate = 0.00000001  # Affects how much the model changes in each iteration
     
     
