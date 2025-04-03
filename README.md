@@ -15,7 +15,13 @@ We will be predicting the prices of houses using linear regression. The dataset 
 You can run the model using "python model.py"
 
 1. We get the data
-![image](https://github.com/user-attachments/assets/d96f2d4e-cbbe-4317-9bde-478aec043e55)
+```python
+def get_data():
+    df = pd.read_csv("Housing.csv")
+    df = df.head(200)
+    df = df[["area", "price"]]
+    return df["area"].to_numpy(), df["price"].to_numpy
+```
 
 2. We make predictions and calculate the cost
 ![image](https://github.com/user-attachments/assets/726db063-1b18-4e85-8ffb-9980dc58dcb8)
